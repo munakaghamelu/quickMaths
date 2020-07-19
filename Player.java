@@ -28,6 +28,10 @@ public class Player {
         }
     }
 
+    public int getCount() {
+        return count;
+    }
+
     public void addToWinningHands(Card card) {
         winningHands.push(card);
     }

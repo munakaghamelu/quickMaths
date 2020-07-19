@@ -8,11 +8,15 @@ public class Card {
         this.suit = suit;
     }
 
+    public int getValue(){
+        return Integer.parseInt(this.value);
+    }
+
     public String toString() {
         if (Integer.parseInt(this.value) == 1) return "Ace of " + this.suit;
-        else if (Integer.parseInt(this.value) == 11) return "Jack of " + this.suit;
-        else if (Integer.parseInt(this.value) == 12) return "Queen of " + this.suit;
-        else if (Integer.parseInt(this.value) == 13) return "King of " + this.suit;
+        else if (this.getValue() == 11) return "Jack of " + this.suit;
+        else if (this.getValue() == 12) return "Queen of " + this.suit;
+        else if (this.getValue() == 13) return "King of " + this.suit;
         else return this.value + " of " + this.suit;
     }
 
