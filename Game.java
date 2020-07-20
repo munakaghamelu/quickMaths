@@ -82,6 +82,19 @@ public class Game {
 
     // Swap a card with player
 
+    public void swapWithPlayer(Player swap1, Player swap2) {
+        Card tempHold = swap1.removeFromHand();
+        swap1.addToHand(swap2.removeFromHand());
+        swap2.addToHand(tempHold);
+    }
+
+    // Check for quick math
+    public boolean checkForQuickMath(Player player) {
+        // Check if any card in player's hand value == target1, target2 or total
+            // if yes add to winnings, and replace the 2 empty spaces
+        // Check if the combination of any 3 cards == target1, target2 or total
+        return false;
+    }
     
 
     public static void main(String[] args) {

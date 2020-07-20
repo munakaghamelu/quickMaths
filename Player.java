@@ -28,6 +28,13 @@ public class Player {
         }
     }
 
+    public Card removeFromHand() {
+        if (!hand.isEmpty()) {
+            return hand.pop();
+        }
+        else return null;
+    }
+
     public int getCount() {
         return count;
     }
@@ -36,22 +43,15 @@ public class Player {
         winningHands.push(card);
     }
 
-    public void addToTrash(Card card) {
-        trash.push(card);
-    }
-
-    public Card removeFromHand(Card card) {
-        if (!hand.isEmpty()) {
-            return hand.pop();
-        }
-        else return null;
-    }
-
     public int countWinnings() {
         while (!winningHands.empty()) {
             winningHands.pop();
             totalWinnings++;
         }
         return totalWinnings;
+    }
+
+    public void addToTrash(Card card) {
+        trash.push(card);
     }
 }
